@@ -1,0 +1,55 @@
+name: ruby
+version: 0.1
+description: A player driven protection plugin
+load: STARTUP
+author: psygate
+main: com.psygate.minecraft.spigot.sovereignty.ruby.Ruby
+database: false
+depends: [nucleus, ivory, amethyst]
+
+commands:
+  listentries:
+    description: Lists snitch entries from the closest snitch.
+    usage: info (<page>) (<event types>...)
+    default: true
+    aliases: [jainfo, rle]
+
+  listeventtypes:
+    description: Lists all available event types.
+    usage: listeventtypes
+    default: true
+    aliases: [rlet]
+
+  namesnitch:
+    description: Sets the name of the closest snitch.
+    usage: namesnitch <new snitch name>
+    default: true
+    aliases: [janame, rname, rns]
+
+  clearsnitch:
+    description: Clears a snitch
+    usage: clearsnitch
+    default: true
+    aliases: [jaclear, rclear, rcs]
+
+  mutesnitch:
+    description: Mutes or unmutes a snitch. (Toggle command)
+    usage: /mutesnitch <snitchname>
+    aliases: [jamute, rms, rmute]
+
+  mutesnitchgroup:
+    description: Mutes or unmutes a snitch group. (Toggle command)
+    usage: /mutesnitch <groupname>
+    aliases: [jamuteg, rmg, rmuteg]
+
+  flush:
+    description: Flushes the ruby cache.
+    usage: /flush
+    default: op
+    aliases: [rf]
+
+  rubyreload:
+    description: Reloads ruby config and cache.
+    usage: /reload
+    default: op
+    alises: [rr]

@@ -1,0 +1,103 @@
+snitches:
+  block: JUKEBOX
+  radius: 5
+  emit_redstone: true
+
+alerts:
+  block: NOTE_BLOCK
+  radius: 5
+  emit_redstone: true
+
+redstone_events:
+  enter:
+    creator: 15
+    admin: 13
+    moderator: 11
+    member: 9
+    guest: 7
+    no_rank: 5
+  exit:
+    creator: 14
+    admin: 12
+    moderator: 10
+    member: 8
+    guest: 6
+    no_rank: 4
+
+limits:
+  chunk_limit: 10
+
+record_renderer_settings:
+#          <snitch_name>
+#          <snitchx>
+#          <snitchy>
+#          <snitchz>
+#          <snitchpworldname>
+#          <snitchworlduuid>
+#          <x>
+#          <y>
+#          <z>
+#          <pworldname>
+#          <worlduuid>
+#          <yellow><player_name><aqua>
+#          <playeruuid>
+#          <victimname>
+#          <victimuuid>
+#          <entitytype>
+#          <entityname>
+#          <blockx>
+#          <blocky>
+#          <blockz>
+#          <blockpworldname>
+#          <blockworlduuid>
+#          <date>
+#          <time>
+  templates:
+    broadcast:
+      PLAYER_LOGIN: "<snitch_name>:<br>     <yellow><player_name><aqua> logged in at (<player_x>,<player_y>,<player_z>,<player_worldname>)"
+      PLAYER_EXIT: "<snitch_name>:<br>     <yellow><player_name><aqua> left at (<player_x>,<player_y>,<player_z>,<player_worldname>)"
+      PLAYER_ENTER: "<snitch_name>:<br>     <yellow><player_name><aqua> entered at (<player_x>,<player_y>,<player_z>,<player_worldname>)"
+      PLAYER_LOGOUT:  "<snitch_name>:<br>     <yellow><player_name><aqua> logged out at (<player_x>,<player_y>,<player_z>,<player_worldname>)"
+      PLAYER_DEATH: "<snitch_name>:<br>     <yellow><player_name><aqua> died at (<player_x>,<player_y>,<player_z>,<player_worldname>)"
+      PLAYER_BLOCK_PLACE: "<snitch_name>:<br>     <yellow><player_name><aqua> placed (<material>,<block_x>,<block_y>,<block_z>,<block_worldname>)"
+      PLAYER_BLOCK_BREAK:  "<snitch_name>:<br>     <yellow><player_name><aqua> broke (<material>,<block_x>,<block_y>,<block_z>,<block_worldname>)"
+      PLAYER_REINFORCEMENT_CREATE: "<snitch_name>:<br>     <yellow><player_name><aqua> reinforced (<material>,<block_x>,<block_y>,<block_z>,<block_worldname>)"
+      PLAYER_REINFORCEMENT_DAMAGE:  "<snitch_name>:<br>     <yellow><player_name><aqua> damaged reinforcement (<material>,<block_x>,<block_y>,<block_z>,<block_worldname>)"
+      PLAYER_DAMAGE_ENTITY: "<snitch_name>:<br>     <yellow><attacker_name><dark_red> damaged <victim_type> at (<victim_x>,<victim_y>,<victim_z>,<victim_worldname>)"
+      PLAYER_KILL_ENTITY:  "<snitch_name>:<br>     <yellow><attacker_name><dark_red> killed <victim_type> at (<victim_x>,<victim_y>,<victim_z>,<victim_worldname>)"
+      PLAYER_DAMAGE_PLAYER: "<snitch_name>:<br>     <yellow><attacker_name><dark_red> damaged <victim_name> at (<victim_x>,<victim_y>,<victim_z>,<victim_worldname>)"
+      PLAYER_ACCESS: "<snitch_name>:<br>     <yellow><player_name><aqua> accessed (<material>,<block_x>,<block_y>,<block_z>,<block_worldname>)"
+      PLAYER_MOUNT_ENTITY: "<snitch_name>:<br>     <yellow><player_name><aqua> mounted <mounted_type> at (<entity_x>,<entity_y>,<entity_z>,<entity_worldname>)"
+      PLAYER_KILL_PLAYER: "<snitch_name>:<br>     <yellow><attacker_name><dark_red> killed <victim_name> at (<victim_x>,<victim_y>,<victim_z>,<victim_worldname>)"
+    persisted:
+      PLAYER_LOGIN: "<date>:<br>     <yellow><player_name><aqua> logged in at (<player_x>,<player_y>,<player_z>,<player_worldname>)"
+      PLAYER_EXIT: "<date>:<br>     <yellow><player_name><aqua> left at (<player_x>,<player_y>,<player_z>,<player_worldname>)"
+      PLAYER_ENTER: "<date>:<br>     <yellow><player_name><aqua> entered at (<player_x>,<player_y>,<player_z>,<player_worldname>)"
+      PLAYER_LOGOUT:  "<date>:<br>     <yellow><player_name><aqua> logged out at (<player_x>,<player_y>,<player_z>,<player_worldname>)"
+      PLAYER_DEATH: "<date>:<br>     <yellow><player_name><aqua> died at (<player_x>,<player_y>,<player_z>,<player_worldname>)"
+      PLAYER_BLOCK_PLACE: "<date>:<br>     <yellow><player_name><aqua> placed (<material>,<block_x>,<block_y>,<block_z>,<block_worldname>)"
+      PLAYER_BLOCK_BREAK:  "<date>:<br>     <yellow><player_name><aqua> broke (<material>,<block_x>,<block_y>,<block_z>,<block_worldname>)"
+      PLAYER_REINFORCEMENT_CREATE: "<date>:<br>     <yellow><player_name><aqua> reinforced (<material>,<block_x>,<block_y>,<block_z>,<block_worldname>)"
+      PLAYER_REINFORCEMENT_DAMAGE:  "<date>:<br>     <yellow><player_name><aqua> damaged reinforcement (<material>,<block_x>,<block_y>,<block_z>,<block_worldname>)"
+      PLAYER_DAMAGE_ENTITY: "<date>:<br>     <yellow><attacker_name><dark_red> damaged <victim_type> at (<victim_x>,<victim_y>,<victim_z>,<victim_worldname>)"
+      PLAYER_KILL_ENTITY:  "<date>:<br>     <yellow><attacker_name><dark_red> killed <victim_type> at (<victim_x>,<victim_y>,<victim_z>,<victim_worldname>)"
+      PLAYER_DAMAGE_PLAYER: "<date>:<br>     <yellow><attacker_name><dark_red> damaged <victim_name> at (<victim_x>,<victim_y>,<victim_z>,<victim_worldname>)"
+      PLAYER_ACCESS: "<date>:<br>     <yellow><player_name><aqua> accessed (<material>,<block_x>,<block_y>,<block_z>,<block_worldname>)"
+      PLAYER_MOUNT_ENTITY: "<date>:<br>     <yellow><player_name><aqua> mounted <mounted_type> at (<entity_x>,<entity_y>,<entity_z>,<entity_worldname>)"
+      PLAYER_KILL_PLAYER: "<date>:<br>     <yellow><attacker_name><dark_red> killed <victim_name> at (<victim_x>,<victim_y>,<victim_z>,<victim_worldname>)"
+    book:
+      PLAYER_LOGIN: "<black><snitch_name> <date>:<br><dark_blue><player_name><dark_blue> logged in at (<player_x>,<player_y>,<player_z>,<player_worldname>)"
+      PLAYER_EXIT: "<black><snitch_name> <date>:<br>     <dark_aqua><player_name><dark_blue> left at (<player_x>,<player_y>,<player_z>,<player_worldname>)"
+      PLAYER_ENTER: "<black><snitch_name> <date>:<br>     <dark_aqua><player_name><dark_blue> entered at (<player_x>,<player_y>,<player_z>,<player_worldname>)"
+      PLAYER_LOGOUT:  "<black><snitch_name ><date>:<br>     <dark_aqua><player_name><dark_blue> logged out at (<player_x>,<player_y>,<player_z>,<player_worldname>)"
+      PLAYER_DEATH: "<black><snitch_name> <date>:<br>     <dark_aqua><player_name><dark_blue> died at (<player_x>,<player_y>,<player_z>,<player_worldname>)"
+      PLAYER_BLOCK_PLACE: "<black><snitch_name> <date>:<br>     <dark_aqua><player_name><dark_blue> placed (<material>,<block_x>,<block_y>,<block_z>,<block_worldname>)"
+      PLAYER_BLOCK_BREAK:  "<black><snitch_name> <date>:<br>     <dark_aqua><player_name><dark_blue> broke (<material>,<block_x>,<block_y>,<block_z>,<block_worldname>)"
+      PLAYER_REINFORCEMENT_CREATE: "<black><snitch_name> <date>:<br>     <dark_aqua><player_name><dark_blue> reinforced (<material>,<block_x>,<block_y>,<block_z>,<block_worldname>)"
+      PLAYER_REINFORCEMENT_DAMAGE:  "<black><snitch_name> <date>:<br>     <dark_aqua><player_name><dark_blue> damaged reinforcement (<material>,<block_x>,<block_y>,<block_z>,<block_worldname>)"
+      PLAYER_DAMAGE_ENTITY: "<black><snitch_name> <date>:<br>     <dark_aqua><attacker_name><dark_red> damaged <victim_type> at (<victim_x>,<victim_y>,<victim_z>,<victim_worldname>)"
+      PLAYER_KILL_ENTITY:  "<black><snitch_name> <date>:<br>     <dark_aqua><attacker_name><dark_red> killed <victim_type> at (<victim_x>,<victim_y>,<victim_z>,<victim_worldname>)"
+      PLAYER_DAMAGE_PLAYER: "<black><snitch_name> <date>:<br>     <dark_aqua><attacker_name><dark_red> damaged <victim_name> at (<victim_x>,<victim_y>,<victim_z>,<victim_worldname>)"
+      PLAYER_ACCESS: "<black><snitch_name> <date>:<br>     <dark_aqua><player_name><dark_blue> accessed (<material>,<block_x>,<block_y>,<block_z>,<block_worldname>)"
+      PLAYER_MOUNT_ENTITY: "<black><snitch_name> <date>:<br>     <dark_aqua><attacker_name><dark_blue> mounted <mounted_type> at (<entity_x>,<entity_y>,<entity_z>,<entity_worldname>)"
+      PLAYER_KILL_PLAYER: "<black><snitch_name> <date>:<br>     <dark_aqua><attacker_name><dark_red> killed <victim_name> at (<victim_x>,<victim_y>,<victim_z>,<victim_worldname>)"
